@@ -1,7 +1,7 @@
 const express = require('express');
 const format = require('date-format');
 const app = express();
-const PORT = process.env.PORT || 3000 
+const PORT = 3000 || process.env.PORT
 
 
 
@@ -26,7 +26,7 @@ app.get("/api/v1/facebook",(req,res) =>{
         follows: 237,
         date : format.asString("dd/MM - hh:mm:ss",new Date())
     }
-    res.status(201).json(fbSocial)
+    res.status(200).json(fbSocial)
 })
 
 app.get("/api/v1/linkedin",(req,res) =>{
