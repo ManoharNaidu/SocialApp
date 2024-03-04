@@ -5,9 +5,9 @@ info:
   version : 1.0.1
 
 servers:
-  - url: https://socialapp-deploy.up.railway.app/
+  - url: https://socialapp-deploy.up.railway.app/api/v1
     description: Localhost version of Social App
-  - url: https://socialapp-deploy.up.railway.app/
+  - url: https://socialapp-deploy.up.railway.app/api/v1
     description: Dummy API url, it doesn't work
 
 components:
