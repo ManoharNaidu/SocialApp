@@ -5,9 +5,9 @@ info:
   version : 1.0.1
 
 servers:
-  - url: http://localhost:3000/api/v1
+  - url: https://socialapp-deploy.up.railway.app/
     description: Localhost version of Social App
-  - url: https://localhost:3000/api/v1
+  - url: https://socialapp-deploy.up.railway.app/
     description: Dummy API url, it doesn't work
 
 components:
@@ -53,6 +53,73 @@ paths:
                     type: integer
                   follows:
                     type: integer
+  /linkedin:
+    get:
+      summary: Returns username, followers and follows
+      responses:
+        '200':
+          description: returns an object
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  username:
+                    type: string
+                  followers:
+                    type: integer
+                  follows:
+                    type: integer
+    post:
+      summary: Returns username, followers and follows
+      responses:
+        '200':
+          description: returns an object
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  username:
+                    type: string
+                  followers:
+                    type: integer
+                  follows:
+                    type: integer
+  /facebook:
+    get:
+      summary: Returns username, followers and follows
+      responses:
+        '200':
+          description: returns an object
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  username:
+                    type: string
+                  followers:
+                    type: integer
+                  follows:
+                    type: integer
+    post:
+      summary: Returns username, followers and follows
+      responses:
+        '200':
+          description: returns an object
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  username:
+                    type: string
+                  followers:
+                    type: integer
+                  follows:
+                    type: integer
+  
   /{token}:
     get:
       summary: returns whatever is in params / url
