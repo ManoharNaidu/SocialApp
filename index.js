@@ -16,7 +16,7 @@ app.get("/api/v1/instagram",(req,res) =>{
         follows: 37,
         date : format.asString("dd/MM - hh:mm:ss",new Date())
     }
-    res.status(200).json(instaSocial)
+    res.status(201).json(instaSocial)
 })
 
 app.get("/api/v1/facebook",(req,res) =>{
